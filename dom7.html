@@ -186,6 +186,26 @@
             alert("password must be contain small and capital letter,number and special characters");
             return;
         }
+        
+let value = password.value;
+
+let small = /[a-z]/.test(value);
+let capital = /[A-Z]/.test(value);
+let number = /[0-9]/.test(value);
+let special = /[!@#$%^&*]/.test(value);
+
+if (small && !capital && !number && !special) {
+    console.log("Weak");
+}
+else if (small && capital && !number && !special) {
+    console.log("Normal");
+}
+else if (small && capital && number && !special) {
+    console.log("Good");
+}
+else if (small && capital && number && special) {
+    console.log("Strong");
+}
         //term
          if(!terms){
             alert("accept terms and conditions");
