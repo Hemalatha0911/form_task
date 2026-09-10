@@ -1,0 +1,29 @@
+
+<ul id="output">OUTPUT:</ul>
+<button id="btn1">ADD</button>
+<button id="btn2">REMOVE</button>
+
+<script>
+    let output = document.getElementById("output");
+    let btn1 = document.getElementById("btn1");
+    let btn2 = document.getElementById("btn2");
+
+    let i = 0;
+    btn1.onclick=()=>{
+        i++;
+        let li = document.createElement("li");
+        li.textContent = "ADD" +i;
+
+        output.appendChild(li);
+    };
+
+    btn2.onclick=()=>{
+        if(i>0){
+            i--;
+            output.lastElementChild.remove();
+        }
+    };
+</script>
+
+
+todo-list beta nine 14 

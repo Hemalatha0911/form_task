@@ -1,0 +1,11 @@
+<h1>Connections</h1>
+<ol>
+    <li onclick="alert('click')">inline</li>
+    <li id="double">internal</li>
+    <li id="hover">external</li>
+</ol>
+<script>
+    let db =document.getElementById("double");
+    db.ondblclick =()=>{alert('dblclick')};
+</script>
+<script src="./dom1.js"></script>

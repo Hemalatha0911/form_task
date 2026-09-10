@@ -1,0 +1,75 @@
+<h1>DOM selectors</h1>
+<ul>
+    <li>getElementById-returns single elements</li>
+    <li>getElementsByClassName - returns html collection</li>
+    <li>getElementsByTagName</li>
+    <li id="list4">querySelector-returns single elements</li>
+    <li>querySelectorAll - return node list</li>
+</ul>
+
+<ol>
+    <li>HTML Collection</li>
+    <ul>
+        <li>Live collection</li>
+        <li>Only Stores elements</li>
+    </ul>
+    <li>Node List</li>
+    <ul>
+        <li>Static collection</li>
+        <li>Stores content and elements</li>
+    </ul>
+</ol>
+    <script>
+        // let list4 =document.getElementById("list4");
+        // console.log(list4);
+
+        // let list1 = document.querySelector("li");
+        // console.log(list1);
+
+        // let list4 = document.querySelector("#list4");
+        // console.log(list4);
+        
+        let list_collection = document.getElementsByTagName("li");
+        console.log(list_collection);
+
+        let list_nodes = document.querySelectorAll("li");
+        console.log(list_nodes);
+
+        // console.log(document.body);
+
+
+    let body_collection =document.body.children;
+    let body_nodes=document.body.childNodes;
+    </script>
+<ul>
+    <li>sample</li>
+</ul>
+<p>Lorem ipsum dolor sit amet.</p>
+
+<script>
+    console.log(list_collection[list_collection.length-1]);
+    console.log(list_nodes[0]);
+    let last = list_collection[list_collection.length-1]
+    last.onclick=()=>{alert("sample")};
+    console.log(last.innerText);
+    last.innerText="<b>my value</b>";
+    last.innerHTML = "<b>my value</b>";
+    last.textContent = "<b><span style ='display:none'>my </span>value</b>";
+</script>
+
+
+
+
+<html>
+    <script>
+    function changevalue(){
+                document.getElementById('label').textContent='my sample'
+                
+            }
+</script>
+
+<body>
+     <h1 id="label">sample</h1>
+        <button id="btn" onclick="changevalue()">Button</button>
+</body>
+</html>

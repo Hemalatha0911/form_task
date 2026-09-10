@@ -1,0 +1,102 @@
+
+<h1>DOM task</h1>
+
+<button id="btn1">change</button>
+<button id="btn2">reset</button>
+<h1 id="output">sample content</h1>
+
+
+<script>
+    let btn = document.getElementById("btn1");
+    let btn2 = document.getElementById("btn2");
+    let out = document.getElementById("output");
+
+     btn.onclick = ()=>{
+        out.innerText = "change Content";
+     }
+     btn2.onclick = ()=>{
+        out.textContent = "sample content"
+     }
+</script>
+
+
+<h1>Style</h1>
+<ul>
+    <li class="list">item1</li>
+     <li class="list">item2</li>
+      <li class="list">item3</li>
+       <li class="list">item4</li>
+</ul>
+<script>
+    let lists = document.getElementsByClassName("list");
+    // lists[0].innerText="one";
+    lists[0].style.backgroundColor = "aqua";
+    lists[1].style.fontSize = "20px";
+    lists[2].style.border = "1px solid black";
+    lists[3].style.textShadow = "5px 5px 5px black";
+</script>
+
+<h1>ClassList</h1>
+<p class="para">Sample Paragraph</p>
+
+<style>
+    .big{
+        font-size: 30px;
+        font-weight: 900;
+    }.red{
+        color: red;
+        background-color: yellow;
+    }.center{
+        text-align: center;
+    }
+</style>
+<script>
+    let paras = document.getElementsByClassName("para");
+    paras[0].classList.add("red","center","big");
+    paras[0].classList.remove("big");
+    paras[0].classList.toggle("red");
+    paras[0].classList.toggle("red");
+    
+</script>
+
+<h1>SetAttribute,getAttribute</h1>
+<img src="https://webneel.com/wallpaper/sites/default/files/images/01-2018/4-beautiful-flower-wallpaper-hd-saxyman.jpg" alt="Flower image not loaded" width="300px" >
+<button id="btn3">print image info</button>
+<button id="btn4">Change source</button>
+<script>
+    let btn3 = document.getElementById("btn3");
+    let image = document.querySelector("img");
+    btn3.onclick=()=>{
+        console.log(image.getAttribute("src"));
+        console.log(image.getAttribute("alt"));
+
+    }
+    let btn4 = document.getElementById("btn4");
+    btn4.onclick=()=>{
+        image.setAttribute("src","https://static.vecteezy.com/system/resources/previews/039/629/893/non_2x/ai-generated-fresh-ripe-fruit-slice-on-wooden-table-healthy-snack-generated-by-ai-free-photo.jpg")
+        image.setAttribute("alt","Mango image not loaded");
+    }
+</script>
+
+
+
+<input type="password" id="password">
+<button id="update">Update</button>
+
+<h2>Output : <span class="answer"></span></h2>
+
+<script>
+    let password = document.getElementById("password");
+    let update = document.getElementById("update");
+    let answer = document.querySelector(".answer");
+
+    update.onclick = () => {
+        answer.innerText = password.value;
+    };
+</script>
+
+
+<input type="password"> 
+<button>Update</button>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH7MaknEDqh4vu4LekmC_Q908hS1ktG129lq4CaE6UCw&s" alt="" width="30">
+<h2>Output : <span class="answer"></span></h2>
